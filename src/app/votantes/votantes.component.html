@@ -1,0 +1,31 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Votantes</div>
+        <div class="card-bpdy text-primary">
+            <h5 class="card-title">Listado Votantes</h5>
+            <div class="my-2 text-left">
+                <button class="btn btn-rounded btn-primary" type="button"  [routerLink] = "['/votantes/form']">Crear Votante</button>
+            </div>
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cedula</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let votanteunidad of votantecons">
+                        <td>{{votanteunidad.nombre}}</td>
+                        <td>{{votanteunidad.apellido}}</td>
+                        <td>{{votanteunidad.cedula}}</td>
+                        <td>{{votanteunidad.email}}</td>
+                        <td>>{{votanteunidad.celular}}</td>
+                    </tr>
+                </tbody>
+            </table>
+       
+    </div>
+</div>
+
